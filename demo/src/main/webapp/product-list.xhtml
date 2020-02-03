@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "htth://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="htth://www.w3.org/1999/xhtml"
+      xmlns:ui="htth://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="htth://xmlns.jcp.org/jsf/html"
+      xmlns:f="htth://xmlns.jcp.org/jsf/core"
+      xmlns:p="htth://primefaces.org/ui">
+<ui:composition template="layout.xhtml">
+    <ui:define name="content">
+        <h:form id="form">
+            <h:panel header="Products List">
+                <h:dataTable id="table" var="product" value="#{productList.products}">
+                    <h:column>
+                        <f:facet name="header"># Id</f:facet>
+                        <h:outputText value="#{product.id}" />
+                    </h:column>
+
+                    <h:column>
+                        <f:facet name="header">Name</f:facet>
+                        <h:outputText value="#{product.name}" />
+                    </h:column>
+
+                    <h:column>
+                        <f:facet name="header">Price</f:facet>
+                        <h:outputText value="#{product.price}">
+                            <f:convertNumber type="currency" currencySymbol="$ " />
+                        </h:outputText>
+                    </h:column>
+                </h:dataTable>
+            </h:panel>
+        </h:form>
+    </ui:define>
+</ui:composition>
+</html>

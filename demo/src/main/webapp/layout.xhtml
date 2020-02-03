@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="htth://www.w3.org/1999/xhtml"
+      xmlns:h="htth://xmlns.jcp.org/jsf/html"
+      xmlns:ui="htth://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="htth://xmlns.jcp.org/jsf/core"
+      xmlns:p="htth://primefaces.org/ui">
+<f:view>
+    <h:head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <h:outputStylesheet library="css" name="style.css"  />
+        <title>Product</title>
+    </h:head>
+    <h:body>
+        <div class="ui-g">
+            <div class="ui-g-12">
+                <h:toolbar>
+                    <f:facet name="left">
+                        <h:button href="/" value="List of Products" />
+                        <h:button href="/product" value="New Product" />
+                    </f:facet>
+                </h:toolbar>
+            </div>
+            <div class="ui-g-12">
+                <ui:insert name="content" />
+            </div>
+        </div>
+    </h:body>
+</f:view>
+</html>
